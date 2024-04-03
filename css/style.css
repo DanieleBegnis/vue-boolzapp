@@ -1,0 +1,56 @@
+/*-------------------
+    RESET
+-------------------*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*-------------------
+    TYPOGRAPHY
+-------------------*/
+.row {
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: -10px;
+    margin-right: -10px;
+}
+.column {
+    padding: 0 10px;
+}
+/*-------------------
+    BODY
+-------------------*/
+
+body {
+    background : linear-gradient(
+    #1B9688 150px,
+    #DBDBDB 150px,
+    #DBDBDB 100%);
+}
+
+.container-big {
+    width: 80%;
+    background-color: red;
+    height: calc(100vh - 48px);
+    margin: 0px auto;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    display: flex;
+    
+}
+
+/* SIDEBAR */
+.sidebar {
+    width: 500px;
+    display: flex;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 0 6px;
+    flex-shrink: 0;
+}
+
+.column-top {
+    width: calc(20%);
+}
