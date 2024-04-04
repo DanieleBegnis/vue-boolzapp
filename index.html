@@ -42,8 +42,12 @@
                         </div>
                     </div>
                     <!-- sidebar search -->
-                    <div class="search"></div>
+                    <div class="search">
+                        <button class="find" @click="addNewUserTask"><i class="fa-solid fa-magnifying-glass"></i></button>
+                        <input class="imput-field" type="text" placeholder="Cerca o inizia una nuova chat" v-model="newUserTask">   
+                    </div>
                     <!-- contact list -->
+                    
                 </section>
                 <section class="homepage"></section>
             </div>

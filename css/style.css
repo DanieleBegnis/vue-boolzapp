@@ -47,6 +47,7 @@ body {
 }
 
 /* SIDEBAR */
+/* sidebar top */
 .sidebar {
     width: 30%;
     display: flex;
@@ -78,6 +79,7 @@ body {
     color: #b1b1b1;
 }
 
+/* notifiche */
 .sidebar-notifications {
     background-color: #8edafc;
     display: flex;
@@ -100,4 +102,21 @@ body {
 .activate-notification {
     text-decoration: underline;
     color: #5f808d;
+}
+
+/* find */
+.search {
+    margin: 8px;
+    border: 1px solid #f5f5f5;
+    padding: 8px;
+}
+.find {
+    border: none;
+    background-color: #fff;
+}
+.imput-field {
+    border: none;
+    background-color: #fff;
+    width: 90%;
+    padding-left: 24px;
 }
