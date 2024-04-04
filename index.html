@@ -48,25 +48,16 @@
                     </div>
                     <!-- contact list -->
                     <div class="contacts">
-                        <div class="contact">
+                        <!-- <div class="contact">
                             <img class="round-img" src="img/avatar_1.jpg" alt="me">
                             <div>Michele</div>
-                        </div>
-                        <div class="contact">
-                            <img class="round-img" src="img/avatar_1.jpg" alt="me">
-                            <div>Michele</div>
-                        </div>
-                        <div class="contact">
-                            <img class="round-img" src="img/avatar_1.jpg" alt="me">
-                            <div>Michele</div>
-                        </div>
-                        <div class="contact">
-                            <img class="round-img" src="img/avatar_1.jpg" alt="me">
-                            <div>Michele</div>
-                        </div>
-                        <div class="contact">
-                            <img class="round-img" src="img/avatar_1.jpg" alt="me">
-                            <div>Michele</div>
+                        </div> -->
+                        <div class="contact"
+                        v-for="singlename, index in contacts">
+                            <img class="round-img" src="`img/avatar${contacts[].avatar}.jpg`" alt="">
+                            <div>
+                                {{ contacts.name }}
+                            </div>
                         </div>
                     </div>
                 </section>
