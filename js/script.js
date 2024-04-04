@@ -103,8 +103,13 @@ createApp({
                 ],
               },
             ],
+            activeChat: 0,
         };
     },
     methods: {
+      activateChat: function(clickedIndex) {
+        this.activeChat = clickedIndex;
+        console.log(clickedIndex)
+      },
     }
 }).mount('#app');
