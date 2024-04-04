@@ -149,7 +149,7 @@ body {
     border-left: 1px solid #b1b1b1;
 }
 .homepage-main {
-    background-image: url('img/mine.jpg');
+    background-image: url(../img/mine.jpg);
     height: calc(100% - 126px);
     flex-grow: 1;
     overflow-y: auto;
