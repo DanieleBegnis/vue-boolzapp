@@ -148,12 +148,27 @@ body {
     background-color: #eaeaea;
     border-left: 1px solid #b1b1b1;
 }
+
+/* homepage main */
 .homepage-main {
     background-image: url(../img/mine.jpg);
     height: calc(100% - 126px);
     flex-grow: 1;
     overflow-y: auto;
 }
+.bubble {
+    border-radius: 4px;
+    padding: 10px;
+    width: 320px;
+    margin: 8px;
+}
+.green {
+    background-color: #d5f9ba;
+}
+.white {
+    background-color: #fff;
+}
+/* homepage bottom */
 .homepage-footer {
     background-color: #f3eeea;
     display: flex;
