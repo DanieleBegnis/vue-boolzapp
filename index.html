@@ -54,7 +54,7 @@
                         </div> -->
                         <div class="contact"
                         v-for="singlename, index in contacts">
-                            <img class="round-img" src="`img/avatar${singlename.avatar}.jpg`" alt="">
+                            <img class="round-img" :src="'./img/avatar' + singlename.avatar + '.jpg'" alt="">
                             <div>
                                 {{ singlename.name }}
                             </div>
