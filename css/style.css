@@ -135,3 +135,40 @@ body {
 .contact:hover {
     background-color: #0004;
 }
+
+/* HOMEPAGE */
+/* homepage top */
+.homepage {
+    width: 70%;
+    background-color: #fff;
+    flex-shrink: 0;
+}
+.homepage-header {
+    background-color: #eaeaea;
+    border-left: 1px solid #b1b1b1;
+}
+.homepage-main {
+    background-image: url('img/mine.jpg');
+    
+    overflow-y: auto;
+}
+.homepage-footer {
+    background-color: #f3eeea;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+.homepage-footer div {
+    margin: 0 12px;
+    font-size: 16px;
+    color: #6b7376;
+
+}
+.message-input {
+    border: none;
+    background-color: #fff;
+    width: 90%;
+    border-radius: 4px;
+    padding: 10px 12px;
+}

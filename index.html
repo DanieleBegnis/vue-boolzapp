@@ -54,14 +54,34 @@
                         </div> -->
                         <div class="contact"
                         v-for="singlename, index in contacts">
-                            <img class="round-img" src="`img/avatar${contacts[].avatar}.jpg`" alt="">
+                            <img class="round-img" src="`img/avatar${singlename.avatar}.jpg`" alt="">
                             <div>
-                                {{ contacts.name }}
+                                {{ singlename.name }}
                             </div>
                         </div>
                     </div>
                 </section>
-                <section class="homepage"></section>
+                <section class="homepage">
+                    <div class="homepage-header">
+                        <div class="row">
+                            <div class="column column-top">
+                                <img class="round-img" src="img/avatar_io.jpg" alt="me">
+                                <div>Max Power</div>
+                            </div>
+                            <div class="column column-top right">
+                                <span><i class="fa-solid fa-magnifying-glass"></i></span>
+                                <span><i class="fa-solid fa-message"></i></span>
+                                <span><i class="fa-solid fa-paperclip"></i></span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="homepage-main"></div>
+                    <div class="homepage-footer">
+                        <div><i class="fa-regular fa-face-smile"></i></div>
+                        <input class="message-input" type="text" placeholder="Scrivi un messaggio" >
+                        <div><i class="fa-solid fa-microphone"></i></div>
+                    </div>
+                </section>
             </div>
         </main>
     </div>
