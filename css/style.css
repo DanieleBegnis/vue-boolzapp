@@ -23,6 +23,9 @@
 .right {
     justify-content: right;
 }
+.d-flex {
+    display: flex;
+}
 /*-------------------
     BODY
 -------------------*/
@@ -66,7 +69,7 @@ body {
     align-items: center;
 }
 
-.column-top img {
+.round-img {
     width: 50px;
     overflow: hidden;
     border-radius: 50%;
@@ -118,4 +121,17 @@ body {
     background-color: #fff;
     width: 90%;
     padding-left: 24px;
+}
+/* contacts */
+.contacts {
+    overflow-y: auto;
+}
+.contact {
+    display: flex;
+    text-align: center;
+    align-items: center;
+    font-weight: 500;
+}
+.contact:hover {
+    background-color: #0004;
 }
