@@ -69,7 +69,7 @@
                                 <!-- <img class="round-img" src="img/avatar_io.jpg" alt="me">
                                 <div>Max Power</div> -->
                                 <!-- <img class="round-img" :src="" alt=""> -->
-                                <!-- <div>{{ contacts.name[activeChat] }}</div> -->
+                                <div>{{ contacts[activeChat].name }}</div>
                             </div>
                             <div class="column column-top right">
                                 <span><i class="fa-solid fa-magnifying-glass"></i></span>
@@ -85,8 +85,8 @@
                         <div class="bubble white">
                             <div>Tutto fatto!</div>
                         </div> -->
-                        <div class="bubble" v-for="singlemessage, index in contacts.messages">
-                            <div>{{ singlemessage.contacts.messages[activeChat] }}</div>
+                        <div class="bubble" v-for="singlemessage, index in contacts[activeChat].messages">
+                            <div>{{ singlemessage.message }}</div>
                         </div>
                     </div>
                     <div class="homepage-footer">
