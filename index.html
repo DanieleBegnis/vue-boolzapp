@@ -68,7 +68,7 @@
                             <div class="column column-top">
                                 <!-- <img class="round-img" src="img/avatar_io.jpg" alt="me">
                                 <div>Max Power</div> -->
-                                <!-- <img class="round-img" :src="" alt=""> -->
+                                <img class="round-img" :src="'./img/avatar' + contacts[activeChat].avatar + '.jpg'" alt="">
                                 <div>{{ contacts[activeChat].name }}</div>
                             </div>
                             <div class="column column-top right">
@@ -85,7 +85,9 @@
                         <div class="bubble white">
                             <div>Tutto fatto!</div>
                         </div> -->
-                        <div class="bubble" v-for="singlemessage, index in contacts[activeChat].messages">
+                        <div class="bubble" 
+                        v-for="singlemessage, index in contacts[activeChat].messages"
+                        :class="{'green': status == sent}">
                             <div>{{ singlemessage.message }}</div>
                         </div>
                     </div>
