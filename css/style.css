@@ -142,6 +142,7 @@ body {
     width: 70%;
     background-color: #fff;
     flex-shrink: 0;
+    height: 100%;
 }
 .homepage-header {
     background-color: #eaeaea;
@@ -149,7 +150,8 @@ body {
 }
 .homepage-main {
     background-image: url('img/mine.jpg');
-    
+    height: calc(100% - 126px);
+    flex-grow: 1;
     overflow-y: auto;
 }
 .homepage-footer {
