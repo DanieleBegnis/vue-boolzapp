@@ -44,7 +44,7 @@
                     <!-- sidebar search -->
                     <div class="search">
                         <button class="find"><i class="fa-solid fa-magnifying-glass"></i></button>
-                        <input class="imput-field" type="text" placeholder="Cerca o inizia una nuova chat">   
+                        <input class="imput-field" type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchUser">   
                     </div>
                     <!-- contact list -->
                     <div class="contacts">
@@ -103,7 +103,7 @@
         </main>
     </div>
 
-    
+
     <script src="https://cdn.jsdelivr.net/npm/luxon@3.4.4/build/global/luxon.min.js"></script>
     <script src='https://unpkg.com/vue@3/dist/vue.global.js'></script>
     <script src="./js/script.js"></script>

@@ -105,6 +105,7 @@ createApp({
               },
             ],
             activeChat: 0,
+            searchUser: "",
             newUserMessage: "",
             date: '',
         };
@@ -143,8 +144,8 @@ createApp({
         },1000)
       },
       //funzione che cerca i contatti
-      searchContact() {
-
+      searchContact(searchUser) {
+        
       }
     }
 }).mount('#app');
