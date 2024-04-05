@@ -104,6 +104,7 @@ createApp({
               },
             ],
             activeChat: 0,
+            newUserMessage: "",
         };
     },
     methods: {
@@ -111,5 +112,13 @@ createApp({
         this.activeChat = clickedIndex;
         console.log(clickedIndex)
       },
+      addNewMessage(activeChat) {
+        const newMessage = {
+          date: 'PLACEHOLDER',
+          message: '',
+          status: 'sent'
+        }
+        this.contacts[activeChat].push(newMessage)
+      }
     }
 }).mount('#app');
