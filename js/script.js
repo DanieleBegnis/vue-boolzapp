@@ -19,6 +19,7 @@ Milestone 4
 
 
 const { createApp } = Vue;
+const dt = luxon.DateTime
 
 createApp({
     data() {
@@ -105,6 +106,7 @@ createApp({
             ],
             activeChat: 0,
             newUserMessage: "",
+            date: '',
         };
     },
     methods: {
@@ -112,6 +114,11 @@ createApp({
       activateChat: function(clickedIndex) {
         this.activeChat = clickedIndex;
         console.log(clickedIndex)
+      },
+      //funzione che inserisce data e ora correnti
+      getCurrentDate() {
+        this.date = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
+        console.log(this.date)
       },
       //funzione che aggiunge nuovo messaggio
       addNewMessage(activeChat) {
@@ -135,7 +142,7 @@ createApp({
       },
       //funzione che cerca i contatti
       searchContact() {
-        
+
       }
     }
 }).mount('#app');
