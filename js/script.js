@@ -115,10 +115,10 @@ createApp({
       addNewMessage(activeChat) {
         const newMessage = {
           date: 'PLACEHOLDER',
-          message: '',
+          message: this.newUserMessage,
           status: 'sent'
         }
-        this.contacts[activeChat].push(newMessage)
+        this.contacts[activeChat].messages.push(newMessage)
       }
     }
 }).mount('#app');
