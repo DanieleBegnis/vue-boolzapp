@@ -44,7 +44,7 @@
                     <!-- sidebar search -->
                     <div class="search">
                         <button class="find"><i class="fa-solid fa-magnifying-glass"></i></button>
-                        <input class="imput-field" type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchContactText">   
+                        <input class="imput-field" type="text" placeholder="Cerca o inizia una nuova chat" v-model="searchContactText" @keyup ="searchContact()">   
                     </div>
                     <!-- contact list -->
                     <div class="contacts">
@@ -53,11 +53,13 @@
                             <div>Michele</div>
                         </div> -->
                         <div class="contact"
-                        v-for="singlename, index in contacts"
+                        v-show="contact.visible"
+                        :class="isActive(index)"
+                        v-for="contact, index in contacts"
                         @click="activateChat(index)">
-                            <img class="round-img" :src="'./img/avatar' + singlename.avatar + '.jpg'" alt="">
+                            <img class="round-img" :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
                             <div>
-                                {{ singlename.name }}
+                                {{ contact.name }}
                             </div>
                         </div>
                     </div>
