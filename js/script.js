@@ -120,7 +120,9 @@ createApp({
         }
         this.contacts[this.activeChat].messages.push(newMessage);
         this.newUserMessage = '';
-        
+        setTimeout(() => {
+          alert('ok')
+        },1000)
       }
     }
 }).mount('#app');
