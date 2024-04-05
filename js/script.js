@@ -157,6 +157,18 @@ createApp({
         }
       });
     },
+    getLastMessage(contact) {
+      console.log(contact)
+      const lastMessageObj = contact.messages[contact.messages.length - 1];
+      if (lastMessageObj.status === 'sent') {
+        return `Tu: ${lastMessageObj.message}`
+      }
+      return `${contact.name}: ${lastMessageObj.message}`
+    },
+    getLastMessageTime(contact) {
+      const lastMessageObj = contact.messages[contact.messages.length - 1];
+      console.log( lastMessageObj.date instanceof Date);
+      return dt.fromFormat(lastMessageObj.date, 'dd/MM/yyyy hh:mm:ss', {locale: 'it'}).toLocaleString(dt.TIME_24_SIMPLE);
+    }
   }
 }).mount('#app');
-getCurrentDate();
