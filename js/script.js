@@ -118,7 +118,9 @@ createApp({
           message: this.newUserMessage,
           status: 'sent'
         }
-        this.contacts[activeChat].messages.push(newMessage)
+        console.log(newMessage)
+        this.contacts[this.activeChat].messages.push(newMessage)
+        
       }
     }
 }).mount('#app');
