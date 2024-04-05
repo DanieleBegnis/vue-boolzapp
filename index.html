@@ -87,10 +87,10 @@
                         </div> -->
                         <div class="bubble" 
                         v-for="singlemessage, index in contacts[activeChat].messages"
-                        :class="{'green': status == sent}"> 
+                        :class="{'green': singlemessage.status === 'sent', 'white' : singlemessage.status === 'received'}"> 
                             <div>{{ singlemessage.message }}</div>
                         </div>
-                        <!-- , 'white : received' -->
+                        
                     </div>
                     <div class="homepage-footer">
                         <div><i class="fa-regular fa-face-smile"></i></div>
