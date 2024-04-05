@@ -118,8 +118,8 @@ createApp({
           message: this.newUserMessage,
           status: 'sent'
         }
-        console.log(newMessage)
-        this.contacts[this.activeChat].messages.push(newMessage)
+        this.contacts[this.activeChat].messages.push(newMessage);
+        this.newUserMessage = '';
         
       }
     }
