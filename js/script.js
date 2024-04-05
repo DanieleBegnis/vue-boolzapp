@@ -123,16 +123,11 @@ createApp({
       this.activeChat = clickedIndex;
       console.log(clickedIndex)
     },
-    //funzione che inserisce data e ora correnti
-    getCurrentDate() {
-      this.date = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
-      console.log(this.date)
-    },
-
     //funzione che aggiunge nuovo messaggio
     addNewMessage(activeChat) {
+      const currentDate = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
       const newMessage = {
-        date: 'PLACEHOLDER',
+        date: currentDate,
         message: this.newUserMessage,
         status: 'sent'
       }
@@ -142,7 +137,7 @@ createApp({
       //risposta automatica dopo 1 secondo
       setTimeout(() => {
         const responseMessage = {
-          date: 'PLACEHOLDER',
+          date: currentDate,
           message: 'ok',
           status: 'received'
         }
