@@ -89,6 +89,7 @@
                         v-for="singlemessage, index in contacts[activeChat].messages"
                         :class="{'green': singlemessage.status === 'sent', 'white' : singlemessage.status === 'received'}"> 
                             <div>{{ singlemessage.message }}</div>
+                            <div class="date">{{ singlemessage.date }}</div>
                         </div>
                         
                     </div>
