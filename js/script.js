@@ -108,18 +108,22 @@ createApp({
         };
     },
     methods: {
+      //funzione chat attuale
       activateChat: function(clickedIndex) {
         this.activeChat = clickedIndex;
         console.log(clickedIndex)
       },
+      //funzione che aggiunge nuovo messaggio
       addNewMessage(activeChat) {
         const newMessage = {
           date: 'PLACEHOLDER',
           message: this.newUserMessage,
           status: 'sent'
         }
+        //pusho messaggio nuovo e azzero campo inserimento
         this.contacts[this.activeChat].messages.push(newMessage);
         this.newUserMessage = '';
+        //risposta automatica dopo 1 secondo
         setTimeout(() => {
           const responseMessage = {
             date: 'PLACEHOLDER',
@@ -128,6 +132,10 @@ createApp({
           }
           this.contacts[this.activeChat].messages.push(responseMessage)
         },1000)
+      },
+      //funzione che cerca i contatti
+      searchContact() {
+        
       }
     }
 }).mount('#app');
