@@ -119,7 +119,9 @@ createApp({
       getCurrentDate() {
         this.date = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
         console.log(this.date)
+        console.log(getCurrentDate)
       },
+      
       //funzione che aggiunge nuovo messaggio
       addNewMessage(activeChat) {
         const newMessage = {
