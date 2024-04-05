@@ -105,7 +105,7 @@ createApp({
               },
             ],
             activeChat: 0,
-            searchUser: "",
+            searchContactText: "",
             newUserMessage: "",
             date: '',
         };
@@ -119,6 +119,7 @@ createApp({
       //funzione che inserisce data e ora correnti
       getCurrentDate() {
         this.date = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
+        console.log(this.date)
       },
       
       //funzione che aggiunge nuovo messaggio
@@ -143,8 +144,12 @@ createApp({
       },
       //funzione che cerca i contatti
       searchContact(searchUser) {
-        
+        const search = this.searchContactText.toLowerCase();
+        this.contacts.forEach((contact) => {
+          const name = contact.name.toLowerCase();
+          contact.visible = name.includes(search);
+        })
       }
     }
 }).mount('#app');
-console.log(this.date)
+getCurrentDate();
