@@ -119,8 +119,6 @@ createApp({
       //funzione che inserisce data e ora correnti
       getCurrentDate() {
         this.date = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
-        console.log(this.date)
-        console.log(getCurrentDate)
       },
       
       //funzione che aggiunge nuovo messaggio
@@ -149,3 +147,4 @@ createApp({
       }
     }
 }).mount('#app');
+console.log(this.date)
