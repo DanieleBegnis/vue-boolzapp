@@ -131,6 +131,7 @@ body {
     text-align: center;
     align-items: center;
     font-weight: 500;
+    justify-content: space-between;
 }
 .contact:hover {
     background-color: #0004;
@@ -194,4 +195,17 @@ body {
     font-size: 8px;
     color: #949194;
     text-align: right;
+}
+.contact-name-lastmessage {
+    text-align: left;
+}
+.last-message {
+    font-size: 12px;
+    color: #6b7376;
+    padding: 4px;
+}
+.last-message-time {
+    font-size: 12px;
+    color: #6b7376;
+    align-self: stretch;
 }

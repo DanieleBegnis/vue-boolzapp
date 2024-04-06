@@ -57,14 +57,16 @@
                         :class="isActive(index)"
                         v-for="contact, index in contacts"
                         @click="activateChat(index)">
-                            <img class="round-img" :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
-                            <div>
-                                {{ contact.name }}
+                            <div class="d-flex">
+                                <img class="round-img" :src="'./img/avatar' + contact.avatar + '.jpg'" alt="">
+                                <div class="contact-name-lastmessage">
+                                    {{ contact.name }}
+                                    <div class="last-message">
+                                        {{ getLastMessage(contact)}}
+                                    </div>
+                                </div>
                             </div>
-                            <div>
-                                {{ getLastMessage(contact)}}
-                            </div>
-                            <div>
+                            <div class="last-message-time">
                                 {{ getLastMessageTime(contact)}}
                             </div>
                         </div>
