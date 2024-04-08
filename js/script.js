@@ -125,7 +125,7 @@ createApp({
     },
     //funzione che aggiunge nuovo messaggio
     addNewMessage(activeChat) {
-      const currentDate = dt.now().setLocale('it').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
+      const currentDate = dt.now().setLocale('fr').toLocaleString(dt.DATETIME_SHORT_WITH_SECONDS);
       const newMessage = {
         date: currentDate,
         message: this.newUserMessage,
@@ -167,7 +167,7 @@ createApp({
     },
     getLastMessageTime(contact) {
       const lastMessageObj = contact.messages[contact.messages.length - 1];
-      return dt.fromFormat(lastMessageObj.date, 'dd/MM/yyyy hh:mm:ss', {locale: 'it'}).toLocaleString(dt.TIME_24_SIMPLE);
+      return dt.fromFormat(lastMessageObj.date, 'dd/MM/yyyy hh:mm:ss', {locale: 'fr'}).toLocaleString(dt.TIME_24_SIMPLE);
     }
   }
 }).mount('#app');
